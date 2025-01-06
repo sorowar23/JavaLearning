@@ -1,0 +1,21 @@
+Keywords -
+abstruct assert boolean break byte case catch char class const continue default do double else enum exports
+extends final finally float for goto if implements import instanceof int interface long module native new
+open opens package private protected provides public requires return short static super switch synchronize
+this throw throws to transient transitive try uses void volatile while with
+
+
+Identifies - 
+any variable names you declare in code
+cannot: start with number,  space, should not have +, - &
+
+Constants - 
+  final variables - final int i = 5;
+  
+Special Symbols -
+[] () {} , ; * = 
+
+Operators - 
+
+ arithmatic, Unary, comparison, logical, bitwise etc.
++ - * / %     ++ --  = > < => <=  && ||

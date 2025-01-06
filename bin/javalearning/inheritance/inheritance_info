@@ -1,0 +1,30 @@
+Inheritance -
+A class that is derived form another class is called subclass. The class form which the subclass is derived called superclass.
+A subclass inherits all the members - fields, methods and nested classes from it's superclass. Constructore are not members, so
+they are not inherited by subclass, but constructor of the superclass can be invoked from the subclass.
+
+When multiple classes share similar behaviour and properties.
+
+Abstract -
+Abstract class is a class that is declared 'abstract' - its may or may not include abstract methods. Abstract
+class can't be instantiated but they can be subclassed.
+When want hide some details / obj form outside of the world we use Abstract class.
+abstract keyword can be used on class and methods.
+abstract void moveTo(double X, double Y);
+
+public abstract class GraphicObject{
+    int count = 0;
+    String name = "";
+    abstract void draw();
+
+    void display(){
+        System.out.println("display out put");
+    }
+}
+
+Interface -
+interface  used to achieve abstraction and multiple inheritances in Java. In other words,
+interfaces primarily define abstract methods that other classes must implement.
+Java Interface also represents the IS-A relationship.
+Interface can contains- methods signatures, default methods, static methods and nested types.
+

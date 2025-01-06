@@ -1,0 +1,115 @@
+Interface - what kind of class will present under interfac e. An interface in Java is a blueprint of a behavior. An interface is a group of related methods with empty bodies
+
+interface Bicycle {
+
+    //  wheel revolutions per minute
+    void changeCadence(int newValue);
+
+    void changeGear(int newValue);
+
+    void speedUp(int increment);
+
+    void applyBrakes(int decrement);
+}
+
+Abstract Class - An abstract class is a class that is declared abstract—it may or may not include abstract methods. Abstract classes cannot be instantiated(cannot be used to create objects), 
+but they can be subclassed.it needs to be subclassed by another class to use its properties. An abstract class is declared using the “abstract” keyword in its class definition.
+
+public abstract class GraphicObject {
+   // declare fields
+   // declare nonabstract methods
+   abstract void draw();
+}
+
+Class - A class is the blueprint from which individual objects are created. where have logic and data together.
+
+class Bicycle {
+
+    int cadence = 0;
+    int speed = 0;
+    int gear = 1;
+
+    void changeCadence(int newValue) {
+         cadence = newValue;
+    }
+
+    void changeGear(int newValue) {
+         gear = newValue;
+    }
+
+    void speedUp(int increment) {
+         speed = speed + increment;   
+    }
+
+    void applyBrakes(int decrement) {
+         speed = speed - decrement;
+    }
+
+    void printStates() {
+         System.out.println("cadence:" +
+             cadence + " speed:" + 
+             speed + " gear:" + gear);
+    }
+}
+
+
+ArrayList - 
+1. ArrayList is a Java class implemented using the List interface. it's from java.util package. 
+2. it's Indexed based implementation. It's accepts duplicates value and Not thread safe. 
+3. ArrayLists provide dynamic resizing where array is fixed in size.
+4. ArrayList can not be used for primitive types, like int, char, etc. 
+5. We need a wrapper class for such cases.
+
+	ArrayList<Integer> arr = new ArrayList<Integer>();
+	
+Arralist Methods - 
+add, get, size, set, clear, remove, clone, short, addAll, contains, indexOf, isEmpty, ListIterator(), iterator(), removeAll()
+removeRange, subList,	toArray()
+
+In Java, the "toArray()" method is used to convert an ArrayList into an array
+
+LinkedList -
+ 1. Doubly-linked list implementation of the List and Deque interfaces
+ 2. LinkedList class is an implementation of the LinkedList data structure 
+    which is a linear data structure where the elements are not stored in contiguous locations 
+    and every element is a separate object with a data part and address part. 
+    The elements are linked using pointers and addresses and each element is known as a node. 
+ 3. In Linked list getting/retrieve data is slower than Arraylist but removing and adding data is way more
+    faster than ArrayList
+
+LinkedList<Integer> linkedList = new LinkedList<>();
+
+HashSet -
+HashSet in Java implements the Set interface of Collections Framework, backed by a hash table (actually a HashMap instance).
+ It is used to store the unique elements and it doesn’t maintain any specific order of elements. does not allow duplicate elements.
+ HashSet is not thread-safe. So to make it thread-safe, synchronization needed externally
+    Set s = Collections.synchronizedSet(new HashSet(...));
+Can store the Null values.
+
+  HashSet<Integer> hs = new HashSet<>();
+HashSet - Methods
+add(), romove(), clear(), clone(), contains(), isEmpty(), size(), iterator()
+
+TreeSet -
+The ordering of the elements is maintained by a set using their natural ordering whether or not an explicit comparator is provided
+TreeSet does not allow duplicate elements. Any attempt to add a duplicate element will be ignored.
+It doesn’t allow null values and throws NullPointerException null element is inserted in it.
+
+TreeSet<String> t = new TreeSet<>();
+
+
+HashMap -
+1. It provides the basic implementation of the Map interface in Java.
+2. HashMap stores data in (key, value) pairs. Each key is associated with a value,
+   and you can access the value by using the corresponding key.
+3. Not Synchronized (unlike Hashtable in Java) and hence faster for most of the cases.
+4. Allows to store the null keys as well, but there should be only one null key object
+   and there can be any number of null values. Duplicate Elements not allowed in HashMap,
+   if you try to insert the duplicate key in HashMap, it will replace the element of the corresponding key.
+
+ HashMap<String, Integer> hashMap = new HashMap<>();
+
+ HasMap Methods - Clear(), Clone(), ComputeIfAbsent(),ContainsKey(), containsValue(), entrySet(), get(),isEmpty(),
+ keySet(), merge(), put(), putAll(), remove(), size(), values(),
+
+ Queue - A Queue is a collection fo
