@@ -8,8 +8,8 @@ public class MainApp {
     public static void main(String[] args) {
 
         final String inputExp = ReadInput.read();
-
         boolean isValid = isValidExpression(inputExp);
+
         if(isValid) {
             String numberArr[] = inputExp.split("[-+*/]");
             String operationsArr[] = inputExp.split("[0-9]+");
@@ -37,7 +37,6 @@ public class MainApp {
                         operate = new Division();
                         break;
                     default:
-                        System.out.println("Invalid Choice.");
                         continue;
                 }
                 Double num = Double.parseDouble(numbers.poll());
