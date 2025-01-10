@@ -1,5 +1,5 @@
 package projectcalculator;
-
+import javalearning.utilities.Utilities;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -8,8 +8,7 @@ public class MainApp {
     public static void main(String[] args) {
 
         final String inputExp = ReadInput.read();
-        boolean isValid = isValidExpression(inputExp);
-
+        boolean isValid = Utilities.isValidExpression(inputExp);
         if(isValid) {
             String numberArr[] = inputExp.split("[-+*/]");
             String operationsArr[] = inputExp.split("[0-9]+");
@@ -44,24 +43,8 @@ public class MainApp {
             }
             System.out.println("Result of Expression:: " + res);
         }else{
-            System.out.println("Invalid Expression!!!");
+            System.out.println("Invalid Expression! Please Enter Valid Expression.");
         }
     }
-    private static boolean isOperator(char c) {
-        return c == '+' || c == '-' || c == '*' || c == '/';
-    }
 
-    private static boolean isValidExpression(String expression) {
-        expression = expression.replaceAll("\\s+", ""); // Remove whitespace
-
-        for (int i = 0; i < expression.length(); i++) {
-            char c = expression.charAt(i);
-
-            if (!Character.isDigit(c) && !isOperator(c)) {
-                return false;
-            }
-        }
-
-        return true;
-    }
 }
