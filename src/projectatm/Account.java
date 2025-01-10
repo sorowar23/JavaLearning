@@ -38,6 +38,28 @@ public class Account {
         return savingsBalance;
     }
 
+    public double calcCheckingDeposit(double amount){
+        System.out.println("Called - calcCheckingDeposit()");
+        checkingBalance = (checkingBalance + amount);
+        return checkingBalance;
+
+    }
+    public double calcSavingsDeposit(double amount){
+        System.out.println("Called - calcSavingsDeposit()");
+        savingsBalance = (savingsBalance + amount);
+        return savingsBalance;
+    }
+    public double calcCheckingWithdraw(double amount){
+        System.out.println("Called - calcCheckingWithdraw()");
+        checkingBalance = (checkingBalance - amount);
+        return checkingBalance;
+    }
+    public double calcSavingsWithdraw(double amount){
+        System.out.println("Called - calcSavingsWithdraw()");
+        savingsBalance = (savingsBalance - amount);
+        return savingsBalance;
+    }
+
     public void getCheckingWithDrawInput(){
         System.out.println("called - getCheckingWithDrawInput()");
         System.out.println("Checking Account Balance:" + moneyFormat.format(checkingBalance));
@@ -62,28 +84,6 @@ public class Account {
             System.out.println("Balance Cannot be Negative.");
         }
     }
-    public double calcCheckingDeposit(double amount){
-        System.out.println("Called - calcCheckingDeposit()");
-        checkingBalance = (checkingBalance + amount);
-        return checkingBalance;
-
-    }
-    public double calcSavingsDeposit(double amount){
-        System.out.println("Called - calcSavingsDeposit()");
-        savingsBalance = (savingsBalance + amount);
-        return savingsBalance;
-    }
-    public double calcCheckingWithdraw(double amount){
-        System.out.println("Called - calcCheckingWithdraw()");
-        checkingBalance = (checkingBalance - amount);
-        return checkingBalance;
-    }
-    public double calcSavingsWithdraw(double amount){
-        System.out.println("Called - calcSavingsWithdraw()");
-        savingsBalance = (savingsBalance - amount);
-        return savingsBalance;
-    }
-
     public void getCheckingDepositInput(){
         System.out.println("called - getCheckingDepositInput()");
         System.out.println("Checking Account Balance:" + moneyFormat.format(checkingBalance));
@@ -99,8 +99,8 @@ public class Account {
     }
     public void getSavingsDepositInput(){
         System.out.println("called - getSavingsDepositInput()");
-        System.out.println("Checking Account Balance:" + moneyFormat.format(checkingBalance));
-        System.out.println("Amount you want to Deposit form Checking Account: ");
+        System.out.println("Savings Account Balance:" + moneyFormat.format(savingsBalance));
+        System.out.println("Amount you want to Deposit form Savings Account: ");
         double amount  = input.nextDouble();
 
         if((savingsBalance + amount) >=0){
