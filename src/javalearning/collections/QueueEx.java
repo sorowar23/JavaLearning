@@ -14,11 +14,11 @@ public class QueueEx {
         System.out.println("Original queue: "+queue );
         queue.remove();
         System.out.println("queue after remove: "+queue );
-        String head =  queue.peek();
-        System.out.println("queue after peek: "+head );
-        head = queue.poll();
-        System.out.println("Removed head: "+head);
-        System.out.println("queue after poll: "+queue);
+        //String head =  queue.peek();
+        //System.out.println("queue after peek: "+head );
+       // head = queue.poll();
+       // System.out.println("Removed head: "+head);
+       // System.out.println("queue after poll: "+queue);
 
 
     }
