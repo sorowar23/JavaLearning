@@ -1,4 +1,4 @@
-package javalearning.polimerfizom;
+package javalearning.Polymorphism;
 
 public class MountainBike extends Bicycle {
 
