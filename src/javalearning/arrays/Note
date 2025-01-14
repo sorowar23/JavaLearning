@@ -38,18 +38,19 @@ String[][] names = {
             {"Smith", "Jones"}
         };
 
+//compare() - Done
 //System Methods
-ArrayCopy()
+ArrayCopy()- Done
 System.arraycopy(copyFrom, 2, copyTo, 0, 7);
-//copyOfRange
+//copyOfRange- Done
 java.util.Arrays.copyOfRange(copyFrom, 2, 9);
-//asList()
-//binarySearch()
-//copyOf()
-//equals()
-//fill()
+//asList() - done
+//binarySearch() - done
+//copyOf()- done
+//equals() -done
+//fill() -done
 //parallelSort()
-//setAll()
-//sort()
-//spliterator()
-//toString()
+//setAll()- done
+//sort() - done
+//spliterator()- Done
+//toString()-done
