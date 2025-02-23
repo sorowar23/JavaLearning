@@ -52,5 +52,5 @@ java.util.Arrays.copyOfRange(copyFrom, 2, 9);
 //parallelSort()
 //setAll()- done
 //sort() - done
-//spliterator()
+//spliterator()- Done
 //toString()-done

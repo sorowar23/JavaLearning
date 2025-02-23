@@ -4,10 +4,11 @@ import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class OptionMenu extends Account{
+public class OptionMenu{
     Scanner menuInput = new Scanner(System.in);
     DecimalFormat moneyFormat = new DecimalFormat("'$'###,##0.00");
     HashMap<Integer, Integer> data = new HashMap<>();
+    Account obj = new Account();
 
     public void getLogin(){
         int x =1;
@@ -16,15 +17,15 @@ public class OptionMenu extends Account{
                 data.put(95501, 19190);
                 data.put(95592, 19191);
                 System.out.println("Enter your customer Number:");
-                setCustomerNumber(menuInput.nextInt());
+                obj.setCustomerNumber(menuInput.nextInt());
                 System.out.println("Enter your PIN Number:");
-                setPinNumber(menuInput.nextInt());
+                obj.setPinNumber(menuInput.nextInt());
             }catch(Exception e){
                 System.out.println("Invalid Character's. Only Numbers");
                 x = 2;
             }
-            int cn = getCustomerNumber();
-            int pn = getPinNumber();
+            int cn = obj.getCustomerNumber();
+            int pn = obj.getPinNumber();
 
             if(data.containsKey(cn) && data.get(cn) == pn){
                 getAccountType();
@@ -69,15 +70,15 @@ public class OptionMenu extends Account{
         int selection = menuInput.nextInt();
         switch (selection){
             case 1:
-                System.out.println("Checking Account Balance: "+moneyFormat.format(getCheckingBalance()));
+                System.out.println("Checking Account Balance: "+moneyFormat.format(obj.getCheckingBalance()));
                 getAccountType();
                 break;
             case 2:
-                getCheckingWithDrawInput();
+                obj.getCheckingWithDrawInput();
                 getAccountType();
                 break;
             case 3:
-                getCheckingDepositInput();
+                obj.getCheckingDepositInput();
                 getAccountType();
                 break;
             case 4:
@@ -99,15 +100,15 @@ public class OptionMenu extends Account{
         int selection = menuInput.nextInt();
         switch (selection){
             case 1:
-                System.out.println("Savings Account Balance: "+moneyFormat.format(getSavingsBalance()));
+                System.out.println("Savings Account Balance: "+moneyFormat.format(obj.getSavingsBalance()));
                 getAccountType();
                 break;
             case 2:
-                getSavingsWithDrawInput();
+                obj.getSavingsWithDrawInput();
                 getAccountType();
                 break;
             case 3:
-                getSavingsDepositInput();
+                obj.getSavingsDepositInput();
                 getAccountType();
                 break;
             case 4:

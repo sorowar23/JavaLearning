@@ -1,6 +1,6 @@
 package projectatm;
 
-public class ATM extends OptionMenu {
+public class ATM {
     public static void main(String[] args) {
         OptionMenu optionMenu = new OptionMenu();
         optionMenu.getLogin();

@@ -1,8 +1,6 @@
 package javalearning.classes;
 
-import lombok.*;
 
-@Data
 public class Student {
 
 	static{
@@ -28,7 +26,7 @@ public class Student {
 		return count;
 	 }
 
-/*
+
 	public String getName() {
 		return name;
 	}
@@ -58,7 +56,7 @@ public class Student {
 		return ("Student Name:" + this.getName()+ ", age is"+ this.getAge()+
 				", Address is:"+ this.getAddress() +"");
 	}
-*/
+
 	public static void main(String[] args) {
 		Student jahan = new Student("Jahan", 40, "8847 238th st");
 		Student ahamed = new Student("Ahamd", 38, "8802 240th st");
